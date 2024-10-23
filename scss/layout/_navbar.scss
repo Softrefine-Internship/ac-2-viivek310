@@ -1,0 +1,44 @@
+@use "../abstracts/variables" as *;
+.sidenav{
+    height: 100svh;
+    width: 8rem;
+    background: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-block: 20px;
+    &__logo{
+        height: 5rem;
+        padding-bottom: 2rem;
+    }
+    &__navItems{
+        flex:1;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 100%;
+        &--svg{
+            width: 100%;
+            padding-block: 15px;
+            display: flex;
+            justify-content: center;
+            & img{
+                width: 30px;
+                height: 30px;
+            }
+            &:hover{
+                background: $folder-color;
+            }
+        }
+        &--query{
+            height: 4rem;
+        }
+    }
+}
+
+.line{
+    height: 1px;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.212);
+    
+}
