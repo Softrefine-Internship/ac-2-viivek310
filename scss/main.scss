@@ -4,6 +4,9 @@
 @use "base/typography";
 @use "layout/content";
 @use "layout/navbar";   
+@use "components/folder";
+@use "components/profile";
+@use "components/recent";
 
 // body{
 //     background: $bg-orange;

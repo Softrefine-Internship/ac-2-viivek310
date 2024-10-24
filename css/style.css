@@ -40,6 +40,10 @@ html {
   height: 100svh;
   background: rgb(197, 101, 197);
   flex: 1;
+  display: flex;
+}
+.main-section > * {
+  height: 100%;
 }
 
 .sidenav {
@@ -52,8 +56,8 @@ html {
   padding-block: 20px;
 }
 .sidenav__logo {
-  height: 5rem;
-  padding-bottom: 2rem;
+  height: 50px;
+  padding-bottom: 20px;
 }
 .sidenav__navItems {
   flex: 1;
@@ -67,22 +71,72 @@ html {
   padding-block: 15px;
   display: flex;
   justify-content: center;
+  transition: background 0.3s ease-out;
 }
 .sidenav__navItems--svg img {
-  width: 30px;
-  height: 30px;
+  width: 25px;
+  height: 25px;
+}
+.sidenav__navItems--svg:first-child {
+  background: #FCE6BD;
 }
 .sidenav__navItems--svg:hover {
   background: #FCE6BD;
 }
 .sidenav__navItems--query {
-  height: 4rem;
+  height: 30px;
 }
 
 .line {
   height: 1px;
   width: 100%;
   background: rgba(0, 0, 0, 0.212);
+}
+
+.folder {
+  background: #FCE6BD;
+  width: 40svh;
+  height: 100%;
+}
+.folder__heading {
+  height: 70px;
+  padding-inline: 30px;
+  padding-block: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+.folder__heading h2 {
+  font-size: 2.3rem;
+}
+.folder__heading p {
+  font-size: 1.2rem;
+}
+.folder__container {
+  padding: 20px;
+}
+.folder__container_directory {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.folder__container_directory-name {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+.folder__container_directory-icon {
+  height: 20px;
+  aspect-ratio: 1/1;
+}
+
+.profile-section {
+  flex: 4;
+  background: green;
+}
+
+.recent-projects {
+  flex: 5;
+  background: red;
 }
 
 /*# sourceMappingURL=style.css.map */

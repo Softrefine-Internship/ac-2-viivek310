@@ -8,8 +8,8 @@
     align-items: center;
     padding-block: 20px;
     &__logo{
-        height: 5rem;
-        padding-bottom: 2rem;
+        height: 50px;
+        padding-bottom: 20px;
     }
     &__navItems{
         flex:1;
@@ -22,16 +22,20 @@
             padding-block: 15px;
             display: flex;
             justify-content: center;
+            transition: background .3s ease-out;
             & img{
-                width: 30px;
-                height: 30px;
+                width: 25px;
+                height: 25px;
+            }
+            &:first-child{
+                background: $folder-color;
             }
             &:hover{
                 background: $folder-color;
             }
         }
         &--query{
-            height: 4rem;
+            height: 30px;
         }
     }
 }
