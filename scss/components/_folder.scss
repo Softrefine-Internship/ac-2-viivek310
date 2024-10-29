@@ -1,9 +1,10 @@
 @use "../abstracts/variables" as *;
 
 .folder{
-    background: $folder-color;
+    background: $folder-color   ;
     width: 40svh;
     height: 100%;
+    transition: width .5s ease-out;
     
     &__heading{
         height: 70px;
@@ -23,19 +24,41 @@
     } 
     
     &__container{
-        padding: 20px;
+        padding: 35px;
         &_directory{
             display: flex;
             justify-content: space-between;
             align-items: center;
+            margin-bottom: 15px;
             &-name{
                 font-size: 1.5rem;
                 font-weight: bold;
             }
             &-icon{
-                height: 20px;
+                height: 15px;
                 aspect-ratio: 1/1;
             }
+            &-files{
+                padding-left: 20px;
+                font-size: 1.3rem;
+                color: rgba($black,.7);
+                &--file{
+                    margin-bottom: 8px;
+                    max-width: 60%;
+                    &:last-child{
+                        color: $black;
+                        margin-bottom: 15px;
+                    }
+                }
+            }
+        }
+    }
+
+    &.closed{
+        width: 0;
+        
+        & > *{
+            display: none;
         }
     }
 }

@@ -1,4 +1,64 @@
+@use "../abstracts/variables" as *;
+
 .profile-section{
     flex: 4;
-    background: green;
+    background: white;
+    padding: 35px;
+    &__nav{
+        display: flex;
+        justify-content: flex-end;
+        // border: 2px solid red;
+        &_more{
+            display: flex;
+            gap: 5px;
+            &--dot{
+                height: 6px;
+                aspect-ratio: 1/1;
+                background: $bg-orange;
+                border-radius: 50%;
+            }
+        }
+    }
+
+    &__header{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-block: 20px;
+        &_btn{
+            padding: 13px 40px;
+            background: $bg-orange;
+            border: none;
+            border-radius: 50px;
+            color: white;
+        }
+        &_container{
+            display: flex;
+            align-items: center ;
+            gap: 20px;
+            &-notification{
+                height: 20px;
+                aspect-ratio: 1/1;
+            }
+            &-profile{
+                display: flex;
+                align-items: center;
+                gap: 10px;
+                &--img{
+                    height: 40px;
+                    aspect-ratio: 1/1;
+                    border-radius: 50%;
+                    overflow: hidden;
+                }
+            }
+            &-dropdown{
+                height: 20px;
+                aspect-ratio: 1/1;
+                background: $folder-color;
+                padding: 4px;
+                border-radius: 50%;
+                border: 1px solid rgba($bg-orange,.5)
+            }
+        }
+    }
 }
