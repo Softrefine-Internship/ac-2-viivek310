@@ -94,7 +94,7 @@ html {
 
 .folder {
   background: #F2ECE2;
-  width: 40svh;
+  width: 45svh;
   height: 100%;
   transition: width 0.5s ease-out;
 }
@@ -153,6 +153,8 @@ html {
   flex: 4;
   background: white;
   padding: 35px;
+  display: flex;
+  flex-direction: column;
 }
 .profile-section__nav {
   display: flex;
@@ -189,6 +191,16 @@ html {
 .profile-section__header_container-notification {
   height: 20px;
   aspect-ratio: 1/1;
+  position: relative;
+}
+.profile-section__header_container-notification::before {
+  height: 5px;
+  width: 5px;
+  background: #F0894D;
+  border-radius: 50%;
+  right: 2px;
+  top: 2px;
+  border: 1px solid white;
 }
 .profile-section__header_container-profile {
   display: flex;
@@ -201,6 +213,14 @@ html {
   border-radius: 50%;
   overflow: hidden;
 }
+.profile-section__header_container-profile--detail--user {
+  font-size: 1.1rem;
+  color: rgba(0, 0, 0, 0.372);
+}
+.profile-section__header_container-profile--detail--name {
+  font-size: 1.4rem;
+  font-weight: bold;
+}
 .profile-section__header_container-dropdown {
   height: 20px;
   aspect-ratio: 1/1;
@@ -209,11 +229,90 @@ html {
   border-radius: 50%;
   border: 1px solid rgba(240, 137, 77, 0.5);
 }
+.profile-section__members {
+  margin-top: 35px;
+  margin-bottom: 30px;
+}
+.profile-section__members_heading {
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+.profile-section__members_images {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.profile-section__members_images-img {
+  height: 50px;
+  aspect-ratio: 1/1;
+  border-radius: 50%;
+  overflow: hidden;
+}
+.profile-section__members_images-img:nth-child(3) {
+  display: grid;
+  place-items: center;
+  background: rgba(252, 230, 189, 0.5);
+  font-size: 1.6rem;
+  color: #F0894D;
+}
+.profile-section__members_images-img:last-child {
+  background: #F2ECE2;
+  height: 30px;
+  width: 30px;
+  padding: 2px;
+  border: 2px dashed #F0894D;
+}
+.profile-section__stats {
+  display: flex;
+  justify-content: space-between;
+  padding: 15px 18px;
+  padding-bottom: 30px;
+  box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.094);
+  border-radius: 20px;
+}
+.profile-section__stats_container-heading {
+  font-size: 1.1rem;
+  color: rgba(0, 0, 0, 0.5);
+}
+.profile-section__stats_container-number {
+  font-size: 1.7rem;
+  font-weight: bold;
+}
+.profile-section__dailytasks {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-top: 30px;
+  padding-right: 20px;
+}
+.profile-section__dailytasks_heading {
+  font-size: 1.8rem;
+}
+.profile-section__dailytasks_edit {
+  color: #F0894D;
+  font-size: 1.4rem;
+}
+.profile-section__cardcontainer {
+  border: 2px solid red;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  flex: 1;
+}
+.profile-section__cardcontainer_card {
+  background: #F0894D;
+  min-width: 45%;
+  flex: 0.5;
+}
 
 .recent-projects {
-  flex: 5;
-  background: rgb(245, 245, 245);
+  flex: 6;
+  background: rgb(249, 249, 249);
   padding: 20px 40px;
+  padding-bottom: 35px;
+  display: flex;
+  flex-direction: column;
 }
 .recent-projects__heading {
   font-size: 2.3rem;
@@ -263,8 +362,9 @@ html {
 }
 .recent-projects__container {
   border: 1px solid rgba(0, 0, 0, 0.189);
-  border-radius: 10px;
+  border-radius: 20px;
   padding: 20px 25px;
+  flex: 1;
 }
 .recent-projects__container_date {
   font-size: 1.1rem;
@@ -283,8 +383,8 @@ html {
   all: unset;
   height: 30px;
   padding: 0px 15px;
-  border: 1px dashed #F0894D;
-  border-radius: 20px;
+  border: 2px dashed rgba(240, 137, 77, 0.5);
+  border-radius: 40px;
   font-size: 1.1rem;
 }
 .recent-projects__container_content-pagination {

@@ -4,6 +4,8 @@
     flex: 4;
     background: white;
     padding: 35px;
+    display: flex;
+    flex-direction: column;
     &__nav{
         display: flex;
         justify-content: flex-end;
@@ -39,6 +41,17 @@
             &-notification{
                 height: 20px;
                 aspect-ratio: 1/1;
+                position: relative;
+                &::before{
+                    height: 5px;
+                    width: 5px;
+                    background: $bg-orange;
+                    border-radius: 50%;
+                    right: 2px;
+                    top: 2px;
+                    // left: 5px;
+                    border: 1px solid white;
+                }
             }
             &-profile{
                 display: flex;
@@ -49,6 +62,17 @@
                     aspect-ratio: 1/1;
                     border-radius: 50%;
                     overflow: hidden;
+                   
+                }
+                &--detail{
+                    &--user{
+                        font-size: 1.1rem;
+                        color: rgba(0, 0, 0, 0.372);
+                    }
+                    &--name{
+                        font-size: 1.4rem;
+                        font-weight: bold;
+                    }
                 }
             }
             &-dropdown{
@@ -59,6 +83,88 @@
                 border-radius: 50%;
                 border: 1px solid rgba($bg-orange,.5)
             }
+        }
+    }
+
+    &__members{
+        margin-top: 35px;
+        margin-bottom: 30px;
+        &_heading{
+            font-size: 1.8rem;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        &_images{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            &-img{
+                height: 50px;
+                aspect-ratio: 1/1;
+                border-radius: 50%;
+                overflow: hidden;
+                &:nth-child(3){
+                    display: grid;
+                    place-items: center;
+                    background: rgba($card2,.5);
+                    font-size: 1.6rem;
+                    color: $bg-orange;
+                }
+                &:last-child{
+                    background: $folder-color;
+                    height: 30px;
+                    width: 30px;
+                    padding: 2px;
+                    border: 2px dashed $bg-orange;
+                }
+            }
+        }
+    }
+    &__stats{
+        display: flex;
+        justify-content: space-between;
+        padding: 15px 18px;
+        padding-bottom: 30px;
+        box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.094);
+        border-radius: 20px;
+        
+        &_container{
+            &-heading{
+                font-size: 1.1rem;
+                color: rgba(0, 0, 0, 0.5);
+            }
+            &-number{
+                font-size: 1.7rem;
+                font-weight: bold;
+            }
+        }
+    }
+
+    &__dailytasks{
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        margin-top: 30px;
+        padding-right: 20px;
+        &_heading{
+            font-size: 1.8rem;
+        }
+        &_edit{
+            color: $bg-orange;
+            font-size: 1.4rem;
+        }
+    }
+
+    &__cardcontainer{
+        border: 2px solid red;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        flex: 1     ;
+        &_card{
+            background: $bg-orange;
+            min-width: 45%;
+            flex:  .5;
         }
     }
 }
